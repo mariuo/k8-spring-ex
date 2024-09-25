@@ -1,6 +1,6 @@
 # k8-spring-ex
 
-## prerequists
+## Required
 
 - minikube
 - docker
@@ -11,7 +11,8 @@
 - mysql
 - helm
 
-## Commands
+```bash
+# Commands
 
 - `minikube delete
   minikube start
@@ -29,10 +30,12 @@
   kubectl get all
 
   GET EXTERNAL IP and tests
+```
 
-## test
+```bash
 
-`curl -X POST \
+## Test request POST
+curl -X POST \
  'http://10.99.178.11:8080/addExchangeRate' \
  --header 'Accept: _/_' \
  --header 'Content-Type: application/json' \
@@ -41,12 +44,18 @@
 "targetCurrency": "CAD",
 "amount": 3,
 "lastUpdated": "2024-11-29"
-}' `
+}'
 
-## test2
+## Test request GET
 
 curl -X GET \
  'http://10.99.178.11:8080/getAmount?sourceCurrency=USD&targetCurrency=AUD' \
  --header 'Accept: _/_' \
 
 `
+```
+
+# Author
+
+Mario Camelo
+https://www.linkedin.com/in/mariocamelogomes
